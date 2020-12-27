@@ -1,0 +1,21 @@
+{% extends "layout.html" %} {% block body %} This is home page for no path,
+<h1>Welcome Home</h1>
+<br />
+<br />
+
+<label for="fname">Name:</label><br />
+<input
+  type="text"
+  placeholder="Type Something ..."
+  id="myInput"
+  value="Visitor"
+/>
+<button type="button" onclick="getInputValue();">Go!</button>
+
+<script>
+  function getInputValue() {
+    var inputVal = document.getElementById("myInput").value;
+    window.location.href = "/" + inputVal;
+  }
+</script>
+{% endblock %}
